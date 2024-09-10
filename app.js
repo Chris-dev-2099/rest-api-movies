@@ -1,4 +1,4 @@
-const express = require('express'); // -> npm install express -E
+const express = require('express');
 const cors = require('cors');
 const crypto = require('node:crypto');
 const movies = require('./movies.json');
@@ -6,8 +6,6 @@ const { validateMovie, validatePartialMovie } = require('./schemas/movies');
 
 const app = express();
 app.disable('x-powered-by');
-
-const PORT = process.env.PORT ?? 1234
 
 app.use(express.json()); // Middleware que transforma la informacion del body en un json
 
@@ -113,7 +111,9 @@ app.delete('/movies/:id', (req, res) => {
 
 })
 
+const PORT = process.env.PORT ?? 1234
+
 app.listen(PORT, () => {
-    console.log('listening on port http://localhost:1234');
+    console.log(`listening on port http://localhost:${PORT}`);
 })
 
