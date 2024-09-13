@@ -3,7 +3,7 @@ GET http://localhost:1234/movies
 
 
 ###Recuperar una películas por id
-GET http://localhost:1234/movies/b6e03689-cccd-478e-8565-d92f40813b13
+GET http://localhost:1234/movies/aa391090-b938-42eb-b520-86ea0aa3917b
 
 
 ###Recuperar una películas por un genero
@@ -35,3 +35,6 @@ Content-Type: application/json
 {
     "year": 1993
 }
+
+### Borrar una película
+DELETE http://localhost:1234/movies/241bf55d-b649-4109-af7c-0e6890ded3fc
